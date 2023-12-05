@@ -27,7 +27,7 @@ app.post('/vehicle/add', (req, res) => {
     if (newVehicle !== undefined) {
         vehicles.push(newVehicle);
     }
-    return res.send("Vehicle added");
+    res.status(201).send("Vehicle added");
 });
 
 //Task4
@@ -35,7 +35,7 @@ app.get('vehicle/search/:model', (req, res) => {
     const { model } = req.params;
     const vehicleFound = vehicles.find((vehicle) => vehicle.model === model);
     if (vehicleFound) {
-        return res.json(vehicleFound);
+        res.status(201).send("Vehicle added");
     }
     else {
         return res.status(404);
