@@ -55,7 +55,7 @@ app.post('/vehicle/add', (req: Request, res: Response) => {
         vehicles.push(newVehicle);
     }
 
-    return res.status(201).json({message: 'Vehicle added'});
+    return res.send("Vehicle added");
 });
 
 //Task4
