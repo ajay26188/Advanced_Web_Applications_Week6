@@ -59,7 +59,7 @@ app.post('/vehicle/add', (req: Request, res: Response) => {
 });
 
 //Task4
-app.get('vehicle/search/:model', (req: Request, res: Response) => {
+app.get('/vehicle/search/:model', (req: Request, res: Response) => {
     const {model} = req.params;
 
     const vehicleFound = vehicles.find((vehicle) => vehicle.model === model);
