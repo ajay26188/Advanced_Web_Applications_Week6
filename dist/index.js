@@ -27,8 +27,9 @@ app.post('/vehicle/add', (req, res) => {
     if (newVehicle !== undefined) {
         vehicles.push(newVehicle);
     }
-    return res.status(201).json({ message: 'Vehicle added' });
+    return res.send("Vehicle added");
 });
+
 //Task4
 app.get('vehicle/search/:model', (req, res) => {
     const { model } = req.params;
