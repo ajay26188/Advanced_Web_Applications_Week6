@@ -65,7 +65,7 @@ app.get('vehicle/search/:model', (req: Request, res: Response) => {
     const vehicleFound = vehicles.find((vehicle) => vehicle.model === model);
 
     if (vehicleFound) {
-        return res.json(vehicleFound);
+        return res.send(vehicleFound);
     }
     else {
         return res.status(404);
